@@ -55,19 +55,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', service: 'QuizArena API Engine', time: new Date() });
 });
 
-// Serve Static Frontend Assets (Unified App)
-const path = require('path');
-const clientDistPath = path.join(__dirname, '../client/dist');
-app.use(express.static(clientDistPath));
-
-// Catch-all SPA router handler for client-side routing
-app.get('*', (req, res, next) => {
-  if (req.path.startsWith('/api') || req.path.startsWith('/socket.io')) {
-    return next();
-  }
-  res.sendFile(path.join(clientDistPath, 'index.html'));
-});
-
 // Error Handler Middleware
 app.use(errorHandler);
 

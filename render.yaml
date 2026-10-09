@@ -1,12 +1,14 @@
 services:
+  # Backend API & Socket.IO Server Service
   - type: web
-    name: quizarena
+    name: quizarena-backend
     runtime: node
     plan: free
-    buildCommand: npm run build
+    rootDir: server
+    buildCommand: npm install
     startCommand: npm start
     envVars:
       - key: PORT
-        value: 10000
+        value: 5000
       - key: NODE_ENV
         value: production

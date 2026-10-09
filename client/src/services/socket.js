@@ -2,9 +2,11 @@ import { io } from 'socket.io-client';
 
 let socket = null;
 
+const SOCKET_SERVER_URL = import.meta.env.VITE_SOCKET_URL || '/';
+
 export const getSocket = () => {
   if (!socket) {
-    socket = io('/', {
+    socket = io(SOCKET_SERVER_URL, {
       autoConnect: true,
       reconnection: true,
       reconnectionAttempts: 10,
