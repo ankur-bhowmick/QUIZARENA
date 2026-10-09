@@ -4,8 +4,9 @@
   "private": true,
   "description": "QuizArena - Real-Time Classroom Quiz Platform",
   "scripts": {
-    "build": "cd client && npm install && npm run build",
-    "start": "cd server && npm start",
-    "dev": "cd server && npm run dev"
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "start:backend": "cd backend && npm start",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev"
   }
 }

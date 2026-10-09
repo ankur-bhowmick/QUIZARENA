@@ -36,7 +36,7 @@
 ## 📁 Directory Structure
 
 ```
-/client
+/frontend
   /src
     /components     # Navbar, Footer, ProtectedAdminRoute
     /context        # AuthContext, SoundContext (Web Audio API Synthesizer)
@@ -45,7 +45,7 @@
     /utils          # Choice configurations & constants
     App.jsx
     main.jsx
-/server
+/backend
   /config           # MongoDB & MongoMemoryServer auto-connect
   /controllers      # Auth, Quiz CRUD, Game Session controllers
   /middleware       # JWT protect, Error handler
@@ -64,10 +64,10 @@
 ### 1. Prerequisites
 * Node.js v18+ and npm installed.
 
-### 2. Backend Setup (`/server`)
+### 2. Backend Setup (`/backend`)
 
 ```bash
-cd server
+cd backend
 npm install
 npm run dev
 ```
@@ -77,12 +77,12 @@ The server will automatically:
 2. Seed the database with demo admin credentials and a sample 15-question trivia quiz (*"General Knowledge Challenge"*).
 3. Start the Express & Socket.IO server on `http://localhost:5000`.
 
-### 3. Frontend Setup (`/client`)
+### 3. Frontend Setup (`/frontend`)
 
 In a separate terminal window:
 
 ```bash
-cd client
+cd frontend
 npm install
 npm run dev
 ```

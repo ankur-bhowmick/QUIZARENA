@@ -1,5 +1,5 @@
 {
-  "name": "quizarena-server",
+  "name": "quizarena-backend",
   "version": "1.0.0",
   "description": "QuizArena Real-Time Classroom Quiz Backend",
   "main": "server.js",
