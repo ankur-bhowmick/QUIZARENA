@@ -5,6 +5,7 @@
 
 **QuizArena** is a complete, production-ready, interactive multiplayer quiz platform designed for classrooms, events, and live trivia challenges. Inspired by modern game-show mechanics, QuizArena features an original visual brand identity, real-time Socket.IO synchronization, an anti-cheat scoring engine, live camera QR code joining, and custom mobile touch controls.
 
+**Website link** - quizarena-ten.vercel.app
 ---
 
 ## 🚀 Key Features
