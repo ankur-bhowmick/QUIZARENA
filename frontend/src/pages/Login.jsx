@@ -34,19 +34,6 @@ export default function Login() {
     }
   };
 
-  const handleDemoLogin = async () => {
-    try {
-      setError('');
-      setLoading(true);
-      await login('admin@example.com', 'Admin@123');
-      navigate('/admin/dashboard', { replace: true });
-    } catch (err) {
-      setError('Demo login failed. Make sure backend server is running.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0B0F19] px-4 py-12">
       <div className="w-full max-w-md">
@@ -144,19 +131,6 @@ export default function Login() {
             </button>
           </form>
 
-          {/* Quick Demo Login Option */}
-          <div className="mt-6 pt-6 border-t border-slate-800">
-            <button
-              onClick={handleDemoLogin}
-              type="button"
-              disabled={loading}
-              className="w-full py-3 rounded-xl bg-amber-950/40 hover:bg-amber-900/50 border border-amber-500/30 text-amber-300 font-bold text-xs flex items-center justify-center gap-2 transition-colors"
-            >
-              <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>One-Click Demo Admin Login (admin@example.com)</span>
-            </button>
-          </div>
-
           <div className="mt-6 text-center text-xs text-slate-400">
             Don't have an admin account?{' '}
             <Link to="/admin/register" className="text-indigo-400 hover:text-indigo-300 font-bold">
@@ -174,7 +148,7 @@ export default function Login() {
           <div className="glass-panel p-6 rounded-3xl max-w-sm w-full border border-slate-800 text-center space-y-4">
             <h3 className="font-display font-bold text-lg text-white">Reset Password</h3>
             <p className="text-xs text-slate-400 leading-relaxed">
-              If you forgot your password, please log in using the demo account credentials (<code className="text-amber-400 font-mono">admin@example.com / Admin@123</code>) or contact your server administrator.
+              Please contact your server administrator or register a new host account if you forgot your credentials.
             </p>
             <button
               onClick={() => setShowForgotModal(false)}

@@ -131,6 +131,10 @@ const sampleQuestions = [
 
 const seedData = async () => {
   try {
+    if (process.env.NODE_ENV === 'production' && process.env.ENABLE_SEED !== 'true') {
+      console.log('Production mode detected: Skipping demo admin auto-seeding for security.');
+      return;
+    }
     await connectDB();
 
     // Check if admin user exists
